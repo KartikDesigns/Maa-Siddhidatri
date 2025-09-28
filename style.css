@@ -1,0 +1,145 @@
+/* ===== Root Color Variables (Maa Siddhidatri Theme) ===== */
+:root {
+  --blue-celestial: #e6f2ff;   /* soft celestial blue (base background) */
+  --blue-silver: #dfe6f9;      /* silver-blue aura (sections) */
+  --blue-sky: #87ceeb;         /* sky openness */
+  --blue-royal: #3f51b5;       /* royal devotion */
+  --blue-indigo: #1a237e;      /* deep cosmic indigo */
+  --gold-spark: #ffd700;       /* divine siddhi sparkle */
+  --text-dark: #1a237e;        /* primary text */
+  --text-light: #ffffff;       /* light text */
+}
+
+/* ===== Body ===== */
+body {
+  background-color: var(--blue-celestial);
+  color: var(--text-dark);
+  font-family: 'Newsreader', serif;
+  margin: 0;
+  padding: 0;
+  transition: background-color 0.4s, color 0.4s;
+  line-height: 1.7;
+  scroll-behavior: smooth;
+}
+
+/* ===== Section Styling ===== */
+section {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+section:nth-child(even) {
+  background-color: var(--blue-silver);
+  border-top: 1px solid rgba(31, 78, 170, 0.1);
+  border-bottom: 1px solid rgba(31, 78, 170, 0.1);
+}
+
+/* ===== Header ===== */
+header#home {
+  background: linear-gradient(135deg, var(--blue-celestial), var(--blue-sky));
+  padding: 2.5rem 0;
+  border-bottom: 3px solid var(--blue-royal);
+  box-shadow: 0 3px 12px rgba(31, 78, 170, 0.25);
+}
+
+/* ===== Navbar & Footer ===== */
+nav.navbar,
+footer {
+  background: linear-gradient(to right, var(--blue-celestial), var(--blue-silver));
+  box-shadow: 0 2px 8px rgba(31, 78, 170, 0.25);
+}
+
+/* ===== Decorative Divider ===== */
+.floral-border {
+  width: 180px;
+  height: 3px;
+  background: linear-gradient(to right, transparent, var(--blue-royal), transparent);
+  margin: 1rem auto 1.25rem;
+  border-radius: 3px;
+  position: relative;
+}
+.floral-border::before,
+.floral-border::after {
+  content: "✦";
+  position: absolute;
+  top: -8px;
+  font-size: 14px;
+  color: var(--gold-spark);
+}
+.floral-border::before { left: -20px; }
+.floral-border::after { right: -20px; }
+
+/* ===== Scroll-to-Top Button ===== */
+#goTopBtn {
+  background: var(--blue-royal);
+  color: var(--text-light);
+  border: none;
+}
+#goTopBtn:hover {
+  background: var(--blue-indigo);
+  box-shadow: 0 0 14px rgba(31, 78, 170, 0.6);
+  transform: scale(1.1);
+  transition: all 0.3s ease-in-out;
+}
+
+/* ===== Headings ===== */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--blue-indigo) !important;
+  margin: 0.75rem 0;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+h1 { font-size: 2.2rem; }
+h2 { font-size: 1.5rem; }
+
+/* ===== Paragraphs ===== */
+p {
+  margin-bottom: 1.2rem;
+  font-size: 1rem;
+}
+
+/* ===== Links ===== */
+a {
+  color: var(--blue-royal);
+  text-decoration: none;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+
+/* ===== Blockquotes ===== */
+blockquote {
+  border-left: 4px solid var(--blue-royal);
+  padding: 1rem 1.2rem;
+  font-style: italic;
+  color: var(--blue-indigo);
+  background: rgba(63, 81, 181, 0.07);
+  border-radius: 6px;
+  font-size: 1.05rem;
+}
+
+/* ===== Images ===== */
+img {
+  border-radius: 10px;
+  transition: transform 0.4s, box-shadow 0.4s;
+}
+
+
+/* ===== Footer Text ===== */
+footer p { margin: 0.3rem 0; }
+footer .highlight-kartik {
+  font-weight: 700;
+  text-shadow: 0 0 6px rgba(31, 78, 170, 0.5);
+}
+
+/* ===== Custom Scrollbar ===== */
+::-webkit-scrollbar { width: 12px; height: 12px; }
+::-webkit-scrollbar-track {
+  background: var(--blue-silver);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--blue-royal);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--blue-indigo);
+}
